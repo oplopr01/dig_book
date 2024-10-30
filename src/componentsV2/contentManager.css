@@ -1,0 +1,43 @@
+/* .content-manager {
+    padding: 20px;
+  }
+  
+  .content-layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .content-layout > * {
+    flex: 1;
+  }
+  
+  .language-switcher {
+    margin-bottom: 20px;
+  }
+   */
+
+
+   .content-manager {
+    padding: 20px;
+}
+
+.content-layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Adjust the width of the accordion */
+.accordion {
+    width: 250px; /* Set a fixed width for the accordion */
+}
+
+/* Ensure content area takes the remaining space */
+.content-area {
+    flex-grow: 1; /* This will allow the content area to take up the remaining space */
+}
+
+.language-switcher {
+    margin-bottom: 20px;
+}
