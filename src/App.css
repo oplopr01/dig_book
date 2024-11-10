@@ -1,26 +1,27 @@
-body {
+   body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
-  }
-  
-  .navbar {
+}
+
+/* Navbar Styling */
+.navbar {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
     background-color: #4a90e2;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-logo {
+}
+
+.navbar-logo {
     font-size: 24px;
     font-weight: bold;
-  }
-  
-  .navbar-buttons button {
+}
+
+.navbar-buttons button {
     margin: 0 5px;
     padding: 8px 15px;
     border: none;
@@ -30,18 +31,19 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .navbar-buttons button:hover {
+}
+
+.navbar-buttons button:hover {
     background-color: #e5e5e5;
-  }
-  
-  .language-switcher {
+}
+
+/* Language Switcher */
+.language-switcher {
     margin: 20px;
     text-align: center;
-  }
-  
-  .language-switcher button {
+}
+
+.language-switcher button {
     margin: 5px;
     padding: 10px 15px;
     cursor: pointer;
@@ -50,74 +52,148 @@ body {
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-  }
-  
-  .language-switcher button:hover {
+}
+
+.language-switcher button:hover {
     background-color: #357abd;
-  }
-  
-  .main-container {
+}
+
+/* Main Layout */
+.main-container {
     display: flex;
     padding: 20px;
-  }
-  
-  .accordion {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Accordion */
+.accordion {
     width: 30%;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
-  }
-  
-  .accordion h3 {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #4a90e2;
-    color: white;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .accordion h3:hover {
-    background-color: #357abd;
-  }
-  
-  .accordion ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 15px;
-  }
-  
-  .accordion li {
-    padding: 8px;
-    background-color: #f1f1f1;
-    margin-bottom: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .accordion li:hover {
-    background-color: #dcdcdc;
-  }
-  
-  .content-area {
+}
+.accordion h3 {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+.accordion h3:hover {
+  background-color: #357abd;
+}
+
+.accordion ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.accordion li {
+  padding: 8px;
+  background-color: #f1f1f1;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion li:hover {
+  background-color: #dcdcdc;
+}
+
+
+/* Content Area */
+.content-area {
     width: 70%;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust Styles on Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .content-layout {
+        flex-direction: column;
+    }
+
+    /* Accordion width for smaller screens */
+    .accordion {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Content area takes full width */
+    .content-area {
+        width: 100%;
+    }
+
+    .navbar-buttons button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .language-switcher {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      margin: 10px 0;
+      padding: 10px 0;
+      background-color: #4a90e2;
   }
-  
-  .content-area h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+
+  .language-switcher button {
+      flex: 0 0 auto;
+      margin: 0 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      background-color: white;
+      color: #4a90e2;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
   }
-  
-  .content-area p {
-    font-size: 16px;
-    line-height: 1.6;
+
+  .language-switcher button:hover {
+      background-color: #357abd;
   }
-  
+}
+
+@media (max-width: 480px) {
+    .navbar-logo {
+        font-size: 20px;
+    }
+
+    .navbar-buttons button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .accordion h3 {
+        font-size: 18px;
+    }
+
+    .accordion li {
+        font-size: 14px;
+    }
+
+    .content-area h2 {
+        font-size: 18px;
+    }
+
+    .content-area p {
+        font-size: 14px;
+    }
+}

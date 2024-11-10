@@ -1,5 +1,5 @@
-import englishContent from "../data/English"
-import hindiContent from "../data/Hindi"
+import englishContent from "./english/English"
+import hindiContent from "./hindi/Hindi"
 export const contentData = {
   English: englishContent,
   Telugu: {
